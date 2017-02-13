@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.dm2.ejerciciosmapas.MainActivity">
+
+    <Button
+        android:id="@+id/buttonOpciones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/opciones"
+        android:onClick="pulsado"/>
+    <Button
+        android:id="@+id/buttonMover"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/buttonOpciones"
+        android:text="@string/mover"
+        android:onClick="pulsado"/>
+    <Button
+        android:id="@+id/buttonAnimar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/buttonMover"
+        android:text="@string/animar"
+        android:onClick="pulsado"/>
+    <Button
+        android:id="@+id/buttonPosicion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/buttonAnimar"
+        android:text="@string/posicion"
+        android:onClick="pulsado"/>
+    <fragment
+        android:name="com.google.android.gms.maps.MapFragment"
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/buttonOpciones">
+    </fragment>
+</RelativeLayout>
